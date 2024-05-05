@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+
+    <style>
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h2{
+            margin-left: 20px;
+        }
+        .ans{
+            margin-left: 50px;
+            text-align: center;
+            justify-content: left;
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task-1</h1>
+    <h2> <span>Q1:</span> Write a JavaScript program to display the current day and time in the <br>
+        following format. <br>
+        Sample Output : Today is : Tuesday. <br>
+        Current time is : 10 PM : 30 : 38</h2> 
+
+    <script>
+        var now = new Date();
+        var day = now.getDay();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var second = now.getSeconds();
+        var amPm 
+        if (hour >= 12) {
+            hour= hour - 12
+            amPm = "PM"
+            
+        }else{
+            amPm = "AM"
+
+        }
+
+        var currentTime = "Current Time is :" + hour +" "+ amPm + " : " + min +" : "+ second;
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var Output =  "Today is :" + dayNames[day]
+
+        document.write(`<h1 class="ans">${Output}`)
+        document.write(`<h1 class="ans">${currentTime}`)
+    </script>
+</body>
+</html>
